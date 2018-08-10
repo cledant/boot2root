@@ -1,0 +1,18 @@
+Title : Aborting boot script
+
+Reproduction step :
+
+1) Setup a virtual machine with virtualbox
+2) Boot the virtual machine and press multiple times Control + C right after that
+3) Booting sequence in now stopped and a prompt appears
+4) Type the following line in the prompt : /casper/vmlinuz file=/cdrom/preseed/custom.seed boot=casper initrd=/casper/initrd.gz quiet splash -- init=/bin/bash
+5) A shell should be loaded
+
+Exploitibility : 
+
+- Physical access to the machine is required
+
+Impact :
+
+- This exploit loads shell with root privilege, giving full access to the machine.
+It gives an access to every user private file, files.

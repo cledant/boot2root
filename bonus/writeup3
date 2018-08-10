@@ -1,0 +1,17 @@
+Title : Login as root in database
+
+Reproduction step :
+
+1) Connect to the forum via https
+
+ In chrome => https://X.X.X.X/forum
+
+2) We see the post "Probleme login ?" and investigate the logs in the post
+
+3) We have found a password : !q\]Ej?*5K5cy*AJ which append to be laurie@borntosec.net one
+
+4) We look at her mail and see the database root password : root/Fg-'kKXBj87E:aJ$
+
+	cat /var/mail/laurie@borntosec.net
+
+5) We are now root in the database
